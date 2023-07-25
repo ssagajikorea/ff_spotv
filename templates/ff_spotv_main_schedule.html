@@ -107,9 +107,11 @@ function make_channel_list(data) {
 
   count = 0;
   for (i in data) {
+    if (data[i].status == "2") state = "종료";
+    else if (data[i].status == "0") state = "예정";
     let channel_clone = channelTemplate.content.cloneNode(true);
     channel_clone.querySelector('#channel-idx').innerHTML = parseInt(i)+1;
-    channel_clone.querySelector('#channel-date').innerHTML += data[i].start_at;
+    channel_clone.querySelector('#channel-date').innerHTML += data[i].start_at + " " + state;
     channel_clone.querySelector('#channel-title').innerHTML = data[i].title || "";
     channel_clone.querySelector('#channel-description').innerHTML = data[i].description || "";
 
