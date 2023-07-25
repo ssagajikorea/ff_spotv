@@ -109,6 +109,7 @@ function make_channel_list(data) {
   for (i in data) {
     if (data[i].status == "2") state = "종료";
     else if (data[i].status == "0") state = "예정";
+    else if (data[i].status == "1") state = "진행중";
     let channel_clone = channelTemplate.content.cloneNode(true);
     channel_clone.querySelector('#channel-idx').innerHTML = parseInt(i)+1;
     channel_clone.querySelector('#channel-date').innerHTML += data[i].start_at + " " + state;
