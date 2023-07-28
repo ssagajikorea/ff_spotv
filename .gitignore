@@ -210,5 +210,4 @@ pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/python,macos
 *.bak
 test*.py
-# mod_main.py
-source_spotv_handler.py
+source*.py

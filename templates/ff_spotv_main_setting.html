@@ -16,8 +16,8 @@
     {{ macros.m_tab_content_start('normal', true) }}
     {{ macros.setting_checkbox('use_spotv', '스포TV', value=arg['use_spotv']) }}
     {{ macros.setting_checkbox('use_spotvnow', '스포TV NOW', value=arg['use_spotvnow']) }}
-    {{ macros.setting_checkbox('use_today_vod', '오늘의 추천 VOD', value=arg['use_today_vod'] ) }}
     {{ macros.setting_checkbox('use_popular_vod', '인기영상 VOD', value=arg['use_popular_vod'] ) }}
+    {{ macros.setting_checkbox('use_today_vod', '오늘의 추천 VOD', value=arg['use_today_vod'] ) }}
     {{ macros.setting_select('use_spotv_quality', '화질', [['1920x1080','FHD'], ['1280x720','HD'], ['960x540', 'SD']],
     col='3', value=arg['use_spotv_quality'])}}
     {{ macros.setting_radio_with_value('spotv_streaming_type', '스트리밍 타입', [['redirect', 'Redirect'],['direct', 'Direct'] , ['proxy',
