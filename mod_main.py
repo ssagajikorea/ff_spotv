@@ -35,6 +35,9 @@ class ModuleMain(PluginModuleBase):
             "spotv_streaming_type": "redirect",
             "spotv_username": "",
             "spotv_password": "",
+            "use_proxy": "False",
+            "use_proxy2": "False",
+            "proxy_url": "",
         }
 
     def process_menu(self, sub, req):
