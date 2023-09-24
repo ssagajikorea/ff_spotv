@@ -112,7 +112,7 @@ function make_channel_list(data) {
     channel_clone.querySelector('#channel-idx').innerHTML = parseInt(i)+1;
     channel_clone.querySelector('#channel-source').innerHTML += data[i].source;
     channel_clone.querySelector('#channel-channel').innerHTML = data[i].channel || "";
-    channel_clone.querySelector('#channel-current').innerHTML += data[i].current;
+    channel_clone.querySelector('#channel-current').innerHTML += data[i].current || "";
     channel_clone.querySelector('#channel-current').title = data[i].id;
 
     buttons = '';
