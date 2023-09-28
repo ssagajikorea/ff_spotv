@@ -18,19 +18,14 @@ except:
 
 class ModuleMain(PluginModuleBase):
     def __init__(self, P):
-        super(ModuleMain, self).__init__(P, name="main", first_menu="setting", scheduler_desc="스포TV")
+        super(ModuleMain, self).__init__(P, name="main", first_menu="setting")
         self.db_default = {
             f"{self.name}_db_version": "1",
-            f"{self.name}_auto_start": "False",
-            f"{self.name}_interval": "5",
-            "plex_server_url": "http://localhost:32400",
-            "plex_token": "",
-            "plex_meta_item": "",
-            "yaml_path": "",
             "use_spotv": "True",
             "use_spotvnow": "False",
             "use_today_vod": "False",
             "use_popular_vod": "False",
+            "use_etc_vod": "True",
             "use_spotv_quality": "1920x1080",
             "spotv_streaming_type": "redirect",
             "spotv_username": "",
@@ -74,13 +69,6 @@ class ModuleMain(PluginModuleBase):
             elif sub == "segment":
                 return SPOTV_Handler.segment(req)
 
-        except Exception as e:
-            P.logger.error(f"Exception:{str(e)}")
-            P.logger.error(traceback.format_exc())
-
-    def scheduler_function(self):
-        try:
-            SPOTV_Handler.sync_yaml_data()
         except Exception as e:
             P.logger.error(f"Exception:{str(e)}")
             P.logger.error(traceback.format_exc())
