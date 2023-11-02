@@ -26,6 +26,8 @@ class ModuleMain(PluginModuleBase):
             "use_today_vod": "False",
             "use_popular_vod": "False",
             "use_etc_vod": "True",
+            "use_pl_vod": "False",
+            "use_ucl_vod": "False",
             "use_spotv_quality": "1920x1080",
             "spotv_streaming_type": "redirect",
             "spotv_username": "",

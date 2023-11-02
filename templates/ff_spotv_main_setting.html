@@ -18,7 +18,11 @@
     {{ macros.setting_checkbox('use_spotvnow', '스포TV NOW', value=arg['use_spotvnow']) }}
     {{ macros.setting_checkbox('use_popular_vod', '인기영상 VOD', value=arg['use_popular_vod'] ) }}
     {{ macros.setting_checkbox('use_today_vod', '오늘의 추천 VOD', value=arg['use_today_vod'] ) }}
-    {{ macros.setting_checkbox('use_etc_vod', '기타 VOD', value=arg['use_etc_vod'] ) }}
+    {{ macros.m_hr() }}
+    {{ macros.setting_checkbox('use_pl_vod', '프리미어리그 VOD', value=arg['use_pl_vod']) }}
+    {{ macros.setting_checkbox('use_ucl_vod', '챔피언스리그 VOD', value=arg['use_ucl_vod'], desc=['상위 4개 페이지만 가져옵니다.', '경기마다 페이지 이동해서 데이터를 가져오기때문에 문제 발생 여지 있어서 2개 리그만 추가했습니다.']) }}
+    
+    {{ macros.m_hr() }}
     {{ macros.setting_select('use_spotv_quality', '화질', [['1920x1080','FHD'], ['1280x720','HD'], ['960x540', 'SD']],
     col='3', value=arg['use_spotv_quality'])}}
     {{ macros.setting_radio_with_value('spotv_streaming_type', '스트리밍 타입', [['redirect', 'Redirect'],['direct', 'Direct'] , ['proxy',
